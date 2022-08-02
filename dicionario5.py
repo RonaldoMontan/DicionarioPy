@@ -26,7 +26,7 @@ while controle in 'Ss':
             print('Valor informado E R R A D O !!\n Digite um valor inteiro')
         else:
             total_idade += dicionario['idade']
-            break    
+            break 
 
     lista.append(dicionario) #==Alimento a lista com os valores de dicionario
     controle = str(input('Deseja continuar ? '))[0]#Vou pegar apenas a primeira letra
@@ -34,4 +34,8 @@ while controle in 'Ss':
 print(lista)
 print(f'Quantidade de pessoas cadastradas {len(lista)}\n')
 media_idade = float(( total_idade / len(lista)))
-print(f'A media de idade cadastrada foi {media_idade}\n')        
+print(f'A media de idade cadastrada foi {media_idade}\n')      
+
+for acha_mulher in lista:
+    if acha_mulher['sexo'] in 'Ff':
+        print(f'    {acha_mulher["nome"]}', end='')   
